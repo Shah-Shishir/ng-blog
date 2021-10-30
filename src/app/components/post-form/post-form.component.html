@@ -1,0 +1,16 @@
+<app-alert></app-alert>
+<form (ngSubmit)="handleSubmit(postForm)" #postForm="ngForm">
+  <div>
+    <label for="title">
+      Title
+      <input type="text" name="title" id="title" [(ngModel)]="post.title" />
+    </label>
+  </div>
+  <div>
+    <label for="body">
+      Body
+      <input type="text" name="body" id="body" [(ngModel)]="post.body" />
+    </label>
+  </div>
+  <button>{{ action }} Post</button>
+</form>

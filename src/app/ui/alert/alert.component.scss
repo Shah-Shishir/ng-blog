@@ -1,0 +1,37 @@
+.alert-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  grid-gap: 20px;
+
+  .img-container {
+    img {
+      width: 30px;
+    }
+  }
+
+  .alert-content {
+    display: flex;
+    flex-direction: column;
+    .type {
+      font-weight: 500;
+      .cross {
+        position: relative;
+        bottom: 6px;
+        float: right;
+        font-size: 25px;
+        color: gray;
+        cursor: pointer;
+      }
+    }
+    .message {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+}
