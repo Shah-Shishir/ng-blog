@@ -1,3 +1,65 @@
+// SCSS dynamic classes
+@for $i from 1 through 20 {
+  // margins
+  .m-#{$i} {
+    margin: #{($i/4) + rem};
+  }
+  .mt-#{$i} {
+    margin-top: #{($i/4) + rem};
+  }
+  .mb-#{$i} {
+    margin-bottom: #{($i/4) + rem};
+  }
+  .mr-#{$i} {
+    margin-right: #{($i/4) + rem};
+  }
+  .ml-#{$i} {
+    margin-left: #{($i/4) + rem};
+  }
+
+  // paddings
+  .p-#{$i} {
+    padding: #{($i/4) + rem};
+  }
+  .pt-#{$i} {
+    padding-top: #{($i/4) + rem};
+  }
+  .pb-#{$i} {
+    padding-bottom: #{($i/4) + rem};
+  }
+  .pr-#{$i} {
+    padding-right: #{($i/4) + rem};
+  }
+  .pl-#{$i} {
+    padding-left: #{($i/4) + rem};
+  }
+
+  // heights
+  .h-#{$i} {
+    height: #{($i/4) + rem};
+  }
+
+  // widths
+  .w-#{$i} {
+    width: #{($i/4) + rem};
+  }
+}
+$percentages: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+@each $percentage in $percentages {
+  .w-#{$percentage}pr {
+    width: #{($percentage) + "%"};
+  }
+  .w-#{$percentage}vh {
+    width: #{($percentage) + vh};
+  }
+  .m-#{$percentage}pr {
+    margin: #{($percentage) + "%"};
+  }
+  .m-#{$percentage}vh {
+    margin: #{($percentage) + vh};
+  }
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 * {
@@ -23,4 +85,75 @@ form {
 
 .box-shadow-md {
   box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Margins
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Height
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+
+// Width
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}
+.min-w-screen {
+  min-width: 100vh;
+}
+
+// Flex
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+// Overflow
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
